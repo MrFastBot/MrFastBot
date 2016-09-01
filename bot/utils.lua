@@ -1275,7 +1275,7 @@ end
 function send_api_msg(msg, receiver, text, disable_web_page_preview, markdown,inline_text,inline_url)
   
   
-  local api_key = 'توکن'
+  local api_key = '189164628:AAGtgTwNbR1WWxjsW7XSKYA5dLgwHiW3TTk'
   
   
   local url_api = 'https://api.telegram.org/bot'..api_key
@@ -1294,15 +1294,15 @@ end
   local dat, res = https.request(url_api)
   local test = print(url_api)
   if res == 400 then
-    reply_msg(msg.id, 'داداش ریدی😐❤\n@MaxPowerTM', ok_cb, true)
+    reply_msg(msg.id, 'Error!', ok_cb, true)
   end
 end
 function send_api_keyboard(msg, receiver, text, keyboard)
-  local api_key = 'توکن'
+  local api_key = '189164628:AAGtgTwNbR1WWxjsW7XSKYA5dLgwHiW3TTk'
   local url_api = 'https://api.telegram.org/bot'..api_key..'/sendMessage?chat_id='.. receiver..'&parse_mode=markdown&&text='..URL.escape(text)..'&disable_web_page_preview=true&reply_markup='..json:encode(keyboard)
   local dat, res = https.request(url_api)
   if res == 400 then
-    reply_msg(msg.id, 'داداش ریدی😐❤\n@MaxPowerTM', ok_cb, true)
+    reply_msg(msg.id, 'Error!', ok_cb, true)
   end
   end
   
